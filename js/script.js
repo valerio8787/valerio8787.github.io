@@ -1,7 +1,8 @@
+var map, locator;
 function initMap() {
 	var markers = [];
 	// Create a map object and specify the DOM element for display.
-    var map = new google.maps.Map(document.getElementById('map'), {
+    map = new google.maps.Map(document.getElementById('map'), {
         center: {lat: 50.449, lng: 30.521},
         scrollwheel: false,
         zoom: 14
@@ -21,6 +22,10 @@ function initMap() {
  		
  		attachDescription(markers[key], places[key]);
     }
+
+    if (navigator.geolocation) {
+        navigator.geolocation.watchPosition(showPosition);
+    }
 }
 
 function attachDescription(marker, place)
@@ -32,4 +37,18 @@ function attachDescription(marker, place)
 	marker.addListener('click', function() {
 	    infowindow.open(marker.get('map'), marker);
 	});
+}
+
+function showPosition(position)
+{
+	if (locator !== undefined)
+	{
+		locator.setMap(null);
+	}
+	locator = new google.maps.Marker({
+		icon: "../img/location.png",
+		map: map,
+	    position: new google.maps.LatLng(position.coords.latitude, position.coords.longitude),
+	    title: "",	       
+    });	
 }
