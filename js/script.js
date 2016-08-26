@@ -1,6 +1,51 @@
-var map, locator;
-function initMap() {
-	var markers = [];
+var map, locator,
+markers = [];
+
+function initPage() {
+	$.each(routes, function () {
+		$("#routes").append('<button type="button" class="btn btn-sm btn-success route" data-routeId="' + this.routeID + '">' + this.title + '</button>');
+		console.log(this);
+	});
+}
+
+function showRoute(id)
+{	console.log(id);
+	var routeID;
+	if (typeof id !== "object"){
+		routeID = id;
+	}
+	else{
+		routeID = $(this).data('routeid');	
+	}
+	
+	for (var key in markers)
+	{
+		markers[key].setMap(null);
+	}
+	for (var key in routes)
+	{
+		if (routes[key].routeID == routeID)
+		{
+			showMarkers(routes[key].places);
+		}
+	}
+}
+
+function showMarkers(places) {
+	for (key in places)
+    {    	
+    	markers[key] = new google.maps.Marker({
+		   map: map,
+		   label: places[key].index,
+	       position: new google.maps.LatLng(places[key].lat, places[key].lng),
+	       title: places[key].title,	       
+ 		});
+ 		
+ 		attachDescription(markers[key], places[key]);
+    }
+}
+
+function initMap() {	
 	// Create a map object and specify the DOM element for display.
     map = new google.maps.Map(document.getElementById('map'), {
         center: {lat: 50.449, lng: 30.521},
@@ -11,17 +56,8 @@ function initMap() {
     google.maps.event.addListener(map, 'click', function(event){
         this.setOptions({scrollwheel:true});
     });
-	
-    for (key in places)
-    {    	
-    	markers[key] = new google.maps.Marker({
-		   map: map,
-	       position: new google.maps.LatLng(places[key].lat, places[key].lng),
-	       title: places[key].title,	       
- 		});
- 		
- 		attachDescription(markers[key], places[key]);
-    }
+    
+    showRoute($("button.route:first").data("routeid"));
 
     if (navigator.geolocation) {
         navigator.geolocation.watchPosition(showPosition);
@@ -52,3 +88,7 @@ function showPosition(position)
 	    title: "",	       
     });	
 }
+
+initPage();
+
+$("body").on("click", ".route", showRoute);

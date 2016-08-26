@@ -1,8 +1,15 @@
 $(function(){
-	for (key in places)
-    {    	
-    	$('#route-list').append('<div class="panel panel-default"><div class="panel-heading"><h2>' + places[key].title + '</h2></div>' 
-			  +'<div class="panel-body">' + places[key].description + '</div></div>');
-    }
+	for (var i in routes){
+		$('#route-list').append('<div class="panel panel-default"><div class="panel-heading" role="tab" id="headingOne"><h4 class="panel-title">' 
+        + '<a data-toggle="collapse" data-parent="#accordion" href="#route' + routes[i].routeID + '" aria-expanded="true" aria-controls="route' + routes[i].routeID + '">'
+        + routes[i].title 
+        + '</a></h4> </div><div id="route' + routes[i].routeID + '" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">'
+		+ '</div></div>');
+		for (key in routes[i].places)
+    	{    	
+    		$("#route" + routes[i].routeID).append('<div class="panel panel-default"><div class="panel-heading"><h2>' + routes[i].places[key].title + '</h2></div>' 
+				  +'<div class="panel-body">' + routes[i].places[key].description + '</div></div>');
+    	}
+	}
 });
 	

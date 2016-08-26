@@ -41,3 +41,11 @@ p.top-desc {
 p.bottom-desc {
   padding: 0em 1em 1em 1em;
 }
+
+button.route{
+  margin-right: 5px;
+}
+
+div#routes{
+	margin-bottom: 1%;
+}
