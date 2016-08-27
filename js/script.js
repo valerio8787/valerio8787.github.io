@@ -22,16 +22,20 @@ function showRoute(id)
 	{
 		markers[key].setMap(null);
 	}
+	
 	for (var key in routes)
 	{
 		if (routes[key].routeID == routeID)
 		{
 			showMarkers(routes[key].places);
 		}
+
 	}
 }
 
 function showMarkers(places) {
+	var first, last, points = [],
+		i = 0;
 	for (key in places)
     {    	
     	markers[key] = new google.maps.Marker({
@@ -42,7 +46,20 @@ function showMarkers(places) {
  		});
  		
  		attachDescription(markers[key], places[key]);
+ 		if (i === 0)
+		{
+			first = places[key].lat + "," + places[key].lng;
+		}else if (i + 1 === places.length)
+		{
+			last = places[key].lat + "," + places[key].lng;
+		}
+		else if (places[key].useInDirection)
+		{
+			points.push({location: places[key].lat + "," + places[key].lng});
+		}
+		i++;
     }
+    showGoogleRoute(first, last, points);
 }
 
 function initMap() {	
@@ -87,6 +104,28 @@ function showPosition(position)
 	    position: new google.maps.LatLng(position.coords.latitude, position.coords.longitude),
 	    title: "",	       
     });	
+}
+
+function showGoogleRoute(first, last, points)
+{
+	console.log(first, last, points)
+	var service = new google.maps.DirectionsService;
+	var display = new google.maps.DirectionsRenderer({suppressMarkers: true});
+    display.setMap(map);
+	service.route({
+	    origin: first,
+	    destination: last,
+	    waypoints: points,
+	    travelMode: google.maps.TravelMode.WALKING,
+	    optimizeWaypoints: true,
+	    avoidTolls: true
+	}, function(response, status) {
+		    if (status === google.maps.DirectionsStatus.OK) {
+		      display.setDirections(response);
+		    } else {
+		      alert('Could not display directions due to: ' + status);
+		    }
+	});
 }
 
 initPage();
