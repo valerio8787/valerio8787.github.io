@@ -4,12 +4,11 @@ markers = [];
 function initPage() {
 	$.each(routes, function () {
 		$("#routes").append('<button type="button" class="btn btn-sm btn-success route" data-routeId="' + this.routeID + '">' + this.title + '</button>');
-		console.log(this);
 	});
 }
 
 function showRoute(id)
-{	console.log(id);
+{	
 	var routeID;
 	if (typeof id !== "object"){
 		routeID = id;
@@ -37,7 +36,7 @@ function showMarkers(places) {
 	var first, last, points = [],
 		i = 0;
 	for (key in places)
-    {    	
+    {
     	markers[key] = new google.maps.Marker({
 		   map: map,
 		   label: places[key].index,
@@ -55,8 +54,16 @@ function showMarkers(places) {
 		}
 		else if (places[key].useInDirection)
 		{
-			points.push({location: places[key].lat + "," + places[key].lng});
-		}
+			if (places[key].breakRoute)
+			{
+				showGoogleRoute(first, places[key].lat + "," + places[key].lng , points);		
+				first = places[key].lat + "," + places[key].lng;
+				points = [];
+			}
+			else {
+				points.push({location: places[key].lat + "," + places[key].lng});
+			}
+		}	
 		i++;
     }
     showGoogleRoute(first, last, points);
@@ -107,8 +114,7 @@ function showPosition(position)
 }
 
 function showGoogleRoute(first, last, points)
-{
-	console.log(first, last, points)
+{	
 	var service = new google.maps.DirectionsService;
 	var display = new google.maps.DirectionsRenderer({suppressMarkers: true});
     display.setMap(map);
@@ -120,12 +126,23 @@ function showGoogleRoute(first, last, points)
 	    optimizeWaypoints: true,
 	    avoidTolls: true
 	}, function(response, status) {
+		console.log("Total distance: " + getTotalDistance(response));
 		    if (status === google.maps.DirectionsStatus.OK) {
 		      display.setDirections(response);
 		    } else {
 		      alert('Could not display directions due to: ' + status);
 		    }
 	});
+}
+
+function getTotalDistance(response)
+{
+	var total = 0;
+	for (key in response.routes[0].legs)
+	{
+		total += response.routes[0].legs[key].distance.value;
+	}
+	return total;
 }
 
 initPage();
