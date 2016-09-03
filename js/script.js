@@ -1,5 +1,5 @@
 var map, locator,
-markers = [];
+markers = [], displays = [];;
 
 function initPage() {
 	$.each(routes, function () {
@@ -21,6 +21,12 @@ function showRoute(id)
 	{
 		markers[key].setMap(null);
 	}
+	for (var key in displays)
+	{
+		displays[key].setMap(null);
+	}
+	markers = [];
+	displays = [];
 	
 	for (var key in routes)
 	{
@@ -115,6 +121,7 @@ function showPosition(position)
 
 function showGoogleRoute(first, last, points)
 {	
+	console.log(first, last, points);
 	var service = new google.maps.DirectionsService;
 	var display = new google.maps.DirectionsRenderer({suppressMarkers: true});
     display.setMap(map);
@@ -133,10 +140,12 @@ function showGoogleRoute(first, last, points)
 		      alert('Could not display directions due to: ' + status);
 		    }
 	});
+	displays.push(display);
 }
 
 function getTotalDistance(response)
 {
+	console.log(response.routes)
 	var total = 0;
 	for (key in response.routes[0].legs)
 	{
