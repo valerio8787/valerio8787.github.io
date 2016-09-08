@@ -7,16 +7,8 @@ function initPage() {
 	});
 }
 
-function showRoute(id)
-{	
-	var routeID;
-	if (typeof id !== "object"){
-		routeID = id;
-	}
-	else{
-		routeID = $(this).data('routeid');	
-	}
-	
+function clearMap()
+{
 	for (var key in markers)
 	{
 		markers[key].setMap(null);
@@ -27,15 +19,31 @@ function showRoute(id)
 	}
 	markers = [];
 	displays = [];
-	
+}
+
+function getRoutes()
+{
+	return routes;
+}
+
+function getRoute(routeID)
+{
 	for (var key in routes)
 	{
 		if (routes[key].routeID == routeID)
 		{
-			showMarkers(routes[key].places);
+			return routes[key];
 		}
-
 	}
+	return null;
+}
+
+
+function showRoute(id)
+{	
+	var routeID = (typeof id !== "object") ? id : $(this).data('routeid');		
+	clearMap();
+    showMarkers(getRoute(routeID).places);
 }
 
 function showMarkers(places) {
@@ -144,8 +152,7 @@ function showGoogleRoute(first, last, points)
 }
 
 function getTotalDistance(response)
-{
-	console.log(response.routes)
+{	
 	var total = 0;
 	for (key in response.routes[0].legs)
 	{
