@@ -7,8 +7,13 @@ $(function(){
 		+ '</div></div>');
 		for (key in routes[i].places)
     	{    	
+    		text = "";
+    		if (descriptions[routes[i].places[key].id] != undefined)
+    		{
+    			text = descriptions[routes[i].places[key].id].text;
+    		}
     		$("#route" + routes[i].routeID).append('<div class="panel panel-default"><div class="panel-heading"><h2>' + routes[i].places[key].title + '</h2></div>' 
-				  +'<div class="panel-body">' + routes[i].places[key].description + '</div></div>');
+				  +'<div class="panel-body">' + text + '</div></div>');
     	}
 	}
 });

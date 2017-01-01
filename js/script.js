@@ -104,8 +104,13 @@ function initMap() {
 
 function attachDescription(marker, place)
 {
+	var text = "";
+    if (descriptions[place.id] != undefined)
+    {
+    	text = descriptions[place.id].text;
+    }
 	var infowindow = new google.maps.InfoWindow({
-	    content: '<div id="content"><h2>' + place.title + '</h2>' + place.description + '</div>'
+	    content: '<div id="content"><h2>' + place.title + '</h2>' + text + '</div>'
 	});
 
 	marker.addListener('click', function() {
