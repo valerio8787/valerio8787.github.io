@@ -1,0 +1,250 @@
+var routes = [
+	{
+		routeID: 1,
+		title: "Day 1 (Saturday)",
+		places: [
+			{
+				id: 1,
+				index: "A",
+				lat: 49.8407141,
+				lng: 24.0288813,
+				useInDirection: true,
+				breakRoute: false,
+				title: "Каплиця Боїмів"
+			},
+			{
+				id: 2,
+				index: "B",
+				lat: 49.8485455,
+				lng: 24.037646,
+				useInDirection: true,
+				title: "Високий замок"
+			},
+			{
+				id: 3,
+				index: "C",
+				lat: 49.8413454,
+				lng: 24.0293867,
+				useInDirection: false,
+				title: "Площа Ринок"							
+			},
+			{
+				id: 4,
+				index: "D",
+				lat: 49.8428334,
+				lng: 24.0308319,
+				useInDirection: true,
+				title: "музей Під чорним орлом"
+			},
+			{
+				id: 5,
+				index: "E",
+				lat: 49.8420657,
+				lng: 24.0322548,
+				useInDirection: true,
+				title: "Церква Успіння Пресвятої Богородиці"
+			},			
+			{
+				id: 6,
+				index: "F",
+				lat: 49.8412692,
+				lng: 24.0331212,
+				useInDirection: true,
+				title: "музей Міський арсенал"
+			},			
+			{
+				id: 7,
+				index: "G",
+				lat: 49.8364027,
+				lng: 23.9953474,
+				useInDirection: true,
+				title: "Церква святих Ольги і Єлизавети"
+			},
+			{
+				id: 8,
+				index: "H",
+				lat: 49.8417399,
+				lng: 24.0299343,
+				useInDirection: true,
+				title: "Вірменський собор"
+			},	
+			{
+				id: 9,
+				index: "I",
+				lat: 49.8407468,
+				lng: 24.0294681,
+				useInDirection: true,
+				title: "Латинський кафедральний собор"				
+			},		
+
+			{	
+				id: 10,	
+				index: "J",
+				lat: 49.8427099,
+				lng: 24.0317784,
+				useInDirection: true,
+				breakRoute: true,
+				title: "Церква пресвятої Євхаристії"			
+			},			
+			{
+				id: 11,
+				index: "K",
+				lat: 49.8384483,
+				lng: 24.0060985,
+				useInDirection: true,
+				title: "Собор святого Юра"
+			},
+			{
+				id: 12,
+				index: "L",
+				lat: 49.839453,
+				lng: 24.0319368,
+				useInDirection: true,
+				title: "Костел і монастир бернардинів"
+			},
+			{
+				id: 13,
+				index: "M",
+				lat: 49.8430269,
+				lng: 24.0257529,
+				useInDirection: true,
+				title: "Національний музей"
+			},			
+			{
+				id: 14,
+				index: "N",
+				lat: 49.842218,
+				lng: 24.0306363,
+				useInDirection: true,
+				title: "Палац Корнякта"
+			},
+			{
+				id: 15,
+				index: "O",
+				lat: 49.8436338,
+				lng: 24.0270429,
+				useInDirection: true,
+				title: "Преображенська церква"
+			},			
+			{
+				id: 16,
+				index: "P",
+				lat: 49.841944,
+				lng: 24.0294783,
+				useInDirection: true,
+				title: "Львівська Ратуша"
+			},
+			{
+				id: 17,
+				index: "Q",
+				lat: 49.8370235,
+				lng: 24.022991,
+				useInDirection: true,
+				title: "Львівська національна галерея"
+			},	
+			{
+				id: 18,
+				index: "R",
+				lat: 49.841521,
+				lng: 24.0271392,
+				useInDirection: true,
+				title: "Костел єзуїтів"
+		    },
+		    {
+		    	id: 19,
+				index: "S",
+				lat: 49.8414032,
+				lng: 24.0324265,
+				useInDirection: true,
+				title: "синагога Золота Роза"
+		    },			
+		    {
+		    	id: 20,
+				index: "T",
+				lat: 49.8203506,
+				lng: 24.0200123,
+				useInDirection: true,
+				breakRoute: true,
+				title: "парк Залізна Вода"
+		    },	
+		    {
+		    	id: 21,
+				index: "U",
+				lat: 49.844072,
+				lng: 24.0637703,
+				useInDirection: true,
+				title: "музей Шевченківський гай"
+		    },	
+		    {
+		    	id: 22,
+				index: "V",
+				lat: 49.849994,
+				lng: 24.0196422,
+				useInDirection: true,
+				title: "Монастир святого Онуфрія"
+		    },	
+		    {
+		    	id: 23,
+				index: "W",
+				lat: 49.8273471,
+				lng: 24.020327,
+				useInDirection: true,
+				title: "Парк культури та відпочинку імені Богдана Хмельницького"
+		    },
+		    {
+		    	id: 24,
+				index: "X",
+				lat: 49.8427518,
+				lng: 24.0355351,
+				useInDirection: true,
+				title: "Костел і монастир кармелітів босих"
+		    },	
+		    {
+		    	id: 25,
+				index: "Y",
+				lat: 49.8230219,
+				lng: 24.0227923,
+				useInDirection: true,
+				title: "Стрийський парк"
+		    },	
+		    {
+		    	id: 26,
+				index: "Z",
+				lat: 49.8369992,
+				lng: 24.0198001,
+				useInDirection: true,
+				title: "Палац Потоцьких"
+		    }
+		]
+	},
+	// {
+	// 	routeID: 2,
+	// 	title: "Day 2 (Sunday)",
+	// 	places:[
+	// 		{
+	// 				index: "1",
+	// 				lat: ,
+	// 				lng: ,
+	// 				useInDirection: true,
+	// 				title: "Батьківщина мати"
+	// 	    },
+	// 		{
+	// 				index: "2",
+	// 				lat: ,
+	// 				lng: ,
+	// 				useInDirection: true,
+	// 				title: "Києво-Печерська Лавра"
+	// 	    },
+	// 		{
+	// 				index: "3",
+	// 				lat: ,
+	// 				lng: ,
+	// 				useInDirection: true,
+	// 				title: "Аскольдова Могила"					
+	// 	    }
+		    
+	//     ]
+	// }
+];
+
+var places = [];

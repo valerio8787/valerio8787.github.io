@@ -86,7 +86,7 @@ function showMarkers(places) {
 function initMap() {	
 	// Create a map object and specify the DOM element for display.
     map = new google.maps.Map(document.getElementById('map'), {
-        center: {lat: 50.449, lng: 30.521},
+        center: {lat: 49.8413454, lng: 24.0293867},
         scrollwheel: false,
         zoom: 14
     });
@@ -129,7 +129,7 @@ function showPosition(position)
 
 function showGoogleRoute(first, last, points)
 {	
-	console.log(first, last, points);
+	//console.log(first, last, points);
 	var service = new google.maps.DirectionsService;
 	var display = new google.maps.DirectionsRenderer({suppressMarkers: true});
     display.setMap(map);
