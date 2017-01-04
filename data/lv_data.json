@@ -83,6 +83,14 @@ var routes = [
 				useInDirection: true,
 				title: "Домiнiканський собор/Церква пресвятої Євхаристії"
 			},
+			{
+				id: 37,
+				index: "~",
+				lat: 49.84311304632987,
+				lng: 24.033697843551636,
+				useInDirection: true,
+				title: "Львівський музей історії релігії"
+			},
 		  {
 				id: 5,
 				index: "E",
@@ -138,7 +146,7 @@ var routes = [
 				lat: 49.84303002015965,
 				lng: 24.027941823005676,
 				useInDirection: true,
-				breakRoute: true,
+
 				title: "Національний музей"
 			},
 
@@ -162,108 +170,100 @@ var routes = [
 		    },
 		    {
 		    	id: 19,
-				index: "S",
-				lat: 49.84140406225519,
-				lng: 24.03461515903473,
-				useInDirection: true,
-				title: "синагога Золота Роза"
+					index: "S",
+					lat: 49.84140406225519,
+					lng: 24.03461515903473,
+					useInDirection: true,
+					title: "синагога Золота Роза"
 		    },
 
 		    {
 		    	id: 24,
-				index: "X",
-				lat: 49.842399535527036,
-				lng: 24.03699964284897,
-				useInDirection: true,
-				title: "Костел і монастир кармелітів босих"
+					index: "X",
+					lat: 49.842399535527036,
+					lng: 24.03699964284897,
+					useInDirection: true,
+					title: "Костел і монастир кармелітів босих"
 		    },
 
 		    {
 		    	id: 26,
-				index: "Z",
-				lat: 49.83782330257929,
-				lng: 24.026702642440796,
-				useInDirection: true,
-				title: "Палац Потоцьких"
+					index: "Z",
+					lat: 49.83782330257929,
+					lng: 24.026702642440796,
+					useInDirection: true,
+					title: "Палац Потоцьких"
 		    },
 
 		    {
 		    	id: 28,
-				index: "1",
-				lat: 49.83884058816867,
-				lng: 24.020533561706543,
-				useInDirection: true,
-				breakRoute: true,
-				title: "Парк імені Івана Франка"
+					index: "1",
+					lat: 49.83884058816867,
+					lng: 24.020533561706543,
+					useInDirection: true,
+
+					title: "Парк імені Івана Франка"
 		    },
 
 		    {
 		    	id: 31,
-				index: "4",
-				lat: 49.837518839283,
-				lng: 24.026155471801758,
-				useInDirection: true,
-				title: "Львівський палац мистецтв"
+					index: "4",
+					lat: 49.837518839283,
+					lng: 24.026155471801758,
+					useInDirection: true,
+					title: "Львівський палац мистецтв"
 		    },
 		    {
 		    	id: 32,
-				index: "5",
-				lat: 49.8411376767044,
-				lng: 24.02135968208313,
-				useInDirection: true,
-				title: "Будинок вчених"
+					index: "5",
+					lat: 49.8411376767044,
+					lng: 24.02135968208313,
+					useInDirection: true,
+					title: "Будинок вчених"
 		    },
 
 		    {
 		    	id: 34,
-				index: "7",
-				lat: 49.83960852605813,
-				lng: 24.036734104156494,
-				useInDirection: true,
-				title: "Музей сакральної барокової скульптури Пінзеля"
+					index: "7",
+					lat: 49.83960852605813,
+					lng: 24.036734104156494,
+					useInDirection: true,
+					title: "Музей сакральної барокової скульптури Пінзеля"
 		    },
 		    {
 		    	id: 35,
-				index: "8",
-				lat: 49.84263478621921,
-				lng: 24.033087641000748,
-				useInDirection: true,
-				title: "Чорна камяниця"
+					index: "8",
+					lat: 49.84263478621921,
+					lng: 24.033087641000748,
+					useInDirection: true,
+					title: "Чорна камяниця"
 		    },
 		    {
 		    	id: 36,
-				index: "9",
-				lat: 49.84740599690904,
-				lng: 24.028939604759216,
-				useInDirection: true,
-				title: "Церква святого Миколая"
-		    },
-		    {
-		    	id: 37,
-				index: "~",
-				lat: 49.84311304632987,
-				lng: 24.033697843551636,
-				useInDirection: true,
-				title: "Львівський музей історії релігії"
+					index: "9",
+					lat: 49.84740599690904,
+					lng: 24.028939604759216,
+					useInDirection: true,
+					title: "Церква святого Миколая"
 		    },
 
 
 		    {
 		    	id: 41,
-				index: "&",
-				lat: 49.84105464714179,
-				lng: 24.02710497379303,
-				useInDirection: true,
-				title: "Музей етнографії та художнього промислу"
+					index: "&",
+					lat: 49.84105464714179,
+					lng: 24.02710497379303,
+					useInDirection: true,
+					title: "Музей етнографії та художнього промислу"
 		    },
 		    {
 		    	id: 42,
-				index: "*",
-				lat: 49.84252321148732,
-				lng: 24.029113948345184,
-				useInDirection: true,
-				breakRoute: true,
-				title: "Державний природознавчий музей НАН України"
+					index: "*",
+					lat: 49.84252321148732,
+					lng: 24.029113948345184,
+					useInDirection: true,
+
+					title: "Державний природознавчий музей НАН України"
 		    }
 		]
 	},
@@ -281,35 +281,35 @@ var routes = [
 			},
 		    {
 		    	id: 29,
-				index: "2",
-				lat: 49.84773807067273,
-				lng: 24.015544652938843,
-				useInDirection: true,
-				title: "Музей пивоваріння"
+					index: "2",
+					lat: 49.84773807067273,
+					lng: 24.015544652938843,
+					useInDirection: true,
+					title: "Музей пивоваріння"
 		    },
 		    {
 		    	id: 30,
-				index: "3",
-				lat: 49.8482993,
-				lng: 24.0369605,
-				useInDirection: true,
-				title: "Замкова гора"
+					index: "3",
+					lat: 49.8482993,
+					lng: 24.0369605,
+					useInDirection: true,
+					title: "Замкова гора"
 		    },
 		    {
 		    	id: 21,
-				index: "U",
-				lat: 49.844072,
-				lng: 24.0637703,
-				useInDirection: true,
-				title: "музей Шевченківський гай"
+					index: "U",
+					lat: 49.844072,
+					lng: 24.0637703,
+					useInDirection: true,
+					title: "музей Шевченківський гай"
 		    },
 		    {
 		    	id: 22,
-				index: "V",
-				lat: 49.849100932849616,
-				lng: 24.028472900390625,
-				useInDirection: true,
-				title: "Монастир святого Онуфрія"
+					index: "V",
+					lat: 49.849100932849616,
+					lng: 24.028472900390625,
+					useInDirection: true,
+					title: "Монастир святого Онуфрія"
 		    },
 		    {
 				id: 7,
@@ -328,39 +328,39 @@ var routes = [
 				title: "Собор святого Юра"
 			},
 			{
-		    	id: 39,
+		    id: 39,
 				index: "$",
 				lat: 49.8130322,
 				lng: 24.0052349,
 				useInDirection: true,
 				title: "парк Горіховий Гай"
-		    },
-		    {
-		    	id: 20,
+		  },
+		  {
+		  	id: 20,
 				index: "T",
 				lat: 49.819129854650356,
 				lng: 24.037656784057617,
 				useInDirection: true,
-				breakRoute: true,
+				
 				title: "парк Залізна Вода"
-		    },
-		    {
-		    	id: 23,
+		  },
+		  {
+		  	id: 23,
 				index: "W",
 				lat: 49.828941182152164,
 				lng: 24.023762941360474,
 				useInDirection: true,
 				title: "Парк культури та відпочинку імені Богдана Хмельницького"
-		    },
-		    {
-		    	id: 25,
+		  },
+		  {
+		  	id: 25,
 				index: "Y",
 				lat: 49.8230219,
 				lng: 24.0227923,
 				useInDirection: true,
 				title: "Стрийський парк"
-		    }
-	    ]
+		  }
+	  ]
 	}
 ];
 
