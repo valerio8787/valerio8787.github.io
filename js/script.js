@@ -40,8 +40,8 @@ function getRoute(routeID)
 
 
 function showRoute(id)
-{	
-	var routeID = (typeof id !== "object") ? id : $(this).data('routeid');		
+{
+	var routeID = (typeof id !== "object") ? id : $(this).data('routeid');
 	clearMap();
     showMarkers(getRoute(routeID).places);
 }
@@ -55,9 +55,9 @@ function showMarkers(places) {
 		   map: map,
 		   label: places[key].index,
 	       position: new google.maps.LatLng(places[key].lat, places[key].lng),
-	       title: places[key].title,	       
+	       title: places[key].title,
  		});
- 		
+
  		attachDescription(markers[key], places[key]);
  		if (i === 0)
 		{
@@ -70,20 +70,20 @@ function showMarkers(places) {
 		{
 			if (places[key].breakRoute)
 			{
-				showGoogleRoute(first, places[key].lat + "," + places[key].lng , points);		
+				showGoogleRoute(first, places[key].lat + "," + places[key].lng , points);
 				first = places[key].lat + "," + places[key].lng;
 				points = [];
 			}
 			else {
 				points.push({location: places[key].lat + "," + places[key].lng});
 			}
-		}	
+		}
 		i++;
     }
     showGoogleRoute(first, last, points);
 }
 
-function initMap() {	
+function initMap() {
 	// Create a map object and specify the DOM element for display.
     map = new google.maps.Map(document.getElementById('map'), {
         center: {lat: 49.8413454, lng: 24.0293867},
@@ -94,7 +94,12 @@ function initMap() {
     google.maps.event.addListener(map, 'click', function(event){
         this.setOptions({scrollwheel:true});
     });
-    
+		google.maps.event.addListener(map, "click", function (event) {
+    	var latitude = event.latLng.lat();
+    	var longitude = event.latLng.lng();
+    	console.log( latitude + ', ' + longitude );
+		});
+
     showRoute($("button.route:first").data("routeid"));
 
     if (navigator.geolocation) {
@@ -128,12 +133,12 @@ function showPosition(position)
 		icon: "../img/location.png",
 		map: map,
 	    position: new google.maps.LatLng(position.coords.latitude, position.coords.longitude),
-	    title: "",	       
-    });	
+	    title: "",
+    });
 }
 
 function showGoogleRoute(first, last, points)
-{	
+{
 	//console.log(first, last, points);
 	var service = new google.maps.DirectionsService;
 	var display = new google.maps.DirectionsRenderer({suppressMarkers: true});
@@ -157,7 +162,7 @@ function showGoogleRoute(first, last, points)
 }
 
 function getTotalDistance(response)
-{	
+{
 	var total = 0;
 	for (key in response.routes[0].legs)
 	{
