@@ -4,29 +4,101 @@ var routes = [
 		title: "Right Side",
 		places: [
 			{
-				id: 1,
-				index: "A",
-				lat: 50.0900514,
-				lng: 14.4034629,
-				useInDirection: true,
-				title: "Вальдштейнський палац"
-			},
-			{
 				id: 2,
 				index: "B",
-				lat: 50.0900514,
-				lng: 14.4034629,
+				lat: 50.090286,
+				lng: 14.407721,
 				useInDirection: true,
 				title: "Вальдштейнський сад"
 			},
 			{
+				id: 1,
+				index: "A",
+				lat: 50.090018,
+				lng: 14.405618,
+				useInDirection: true,
+				title: "Вальдштейнський палац"
+			},
+			{
 				id: 3,
 				index: "C",
-				lat: 50.0895666,
-				lng: 14.4006435,
+				lat: 50.090864,
+				lng: 14.400404,
 				useInDirection: true,
 				title: "Собор св. Вита"
-			}
+			},
+			{
+				id: 4,
+				index: "D",
+				lat: 50.091094,
+				lng: 14.401592,
+				useInDirection: true,
+				title: "Празький град"
+			},
+			{
+				id: 5,
+				index: "E",
+				lat: 50.091711,
+				lng: 14.405068,
+				useInDirection: true,
+				title: "Zlata ulicka"
+			},
+			{
+				id: 7,
+				index: "G",
+				lat: 50.088056,
+				lng: 14.398669,
+				useInDirection: true,
+				title: "Музей алхимиков и магов"
+			},
+			{
+				id: 9,
+				index: "I",
+				lat: 50.082733,
+				lng: 14.404105,
+				useInDirection: true,
+				title: "Фуникулер"
+			},
+			{
+				id: 8,
+				index: "H",
+				lat: 50.082300,
+				lng: 14.396570,
+				useInDirection: true,
+				title: "Петришин холм"
+			},
+			{
+				id: 6,
+				index: "F",
+				lat: 50.087912,
+				lng: 14.409525,
+				useInDirection: true,
+				title: "Найвужча вуличка Праги"
+			},
+			{
+				id: 10,
+				index: "J",
+				lat: 50.088080,
+				lng: 14.410257,
+				useInDirection: true,
+				title: "Piss Sculpture"
+			},
+			// {
+			// 	id: 9,
+			// 	index: "",
+			// 	lat: 50.0910799,
+			// 	lng: 14.3993791,
+			// 	useInDirection: true,
+			// 	title: ""
+			// },
+			// {
+			// 	id: 10,
+			// 	index: "",
+			// 	lat: 50.0910799,
+			// 	lng: 14.3993791,
+			// 	useInDirection: true,
+			// 	title: ""
+			// },
 			
 		]
 	},
@@ -35,28 +107,177 @@ var routes = [
 		title: "Left Side",
 		places: [
 			{
-				id: 13,
-				index: "M",
-				lat: 49.84303002015965,
-				lng: 24.027941823005676,
+				id: 102,
+				index: "N",
+				lat: 50.082348,
+				lng: 14.426181,
 				useInDirection: true,
-
-				title: "Національний музей"
-			}
+				title: "Вацлавська площа"
+			},
+			{
+				id: 101,
+				index: "M",
+				lat: 50.087633,
+				lng: 14.421014,
+				useInDirection: true,
+				title: "Староміська площа"
+			},
+			{
+				id: 108,
+				index: "Z",
+				lat: 50.081583,
+				lng: 14.420811,
+				useInDirection: true,
+				title: "Kafka"
+			},
+			{
+				id: 107,
+				index: "T",
+				lat: 50.087015,
+				lng: 14.420725,
+				useInDirection: true,
+				title: "Куранты"
+			},
+			{
+				id: 103,
+				index: "O",
+				lat: 50.086460,
+				lng: 14.411718,
+				useInDirection: true,
+				title: "Карлов мост"
+			},
+			{
+				id: 104,
+				index: "P",
+				lat: 50.087191,
+				lng: 14.427865,
+				useInDirection: true,
+				title: "Пороховая башня"
+			},
+			{
+				id: 105,
+				index: "R",
+				lat: 50.082947,
+				lng: 14.423796,
+				useInDirection: true,
+				title: "Костел Девы Марии"
+			},
+			{
+				id: 107,
+				index: "T",
+				lat: 50.084272,
+				lng: 14.408782,
+				useInDirection: true,
+				title: "Остров Кампа"
+			},
+			{
+				id: 108,
+				index: "T",
+				lat: 50.082558,
+				lng: 14.409858,
+				useInDirection: true,
+				title: "Стрелецкий Остров"
+			},
+			{
+				id: 106,
+				index: "S",
+				lat: 50.075414,
+				lng: 14.414144,
+				useInDirection: true,
+				title: "Танцующий дом"
+			},
+			{
+				id: 109,
+				index: "Y",
+				lat: 50.064474,
+				lng: 14.419504,
+				useInDirection: true,
+				title: "Вышеград"
+			},
 		]
 	},
 	{
-		routeID: 2,
-		title: "08/01(Sunday)",
+		routeID: 3,
+		title: "Children",
 		places:[
+			{
+				id: 205,
+				index: "E",
+				lat: 50.088403,
+				lng: 14.491226,
+				useInDirection: true,
+				title: "JUMPPARK Prague"
+			},
+			{
+				id: 202,
+				index: "B",
+				lat: 50.082606,
+				lng: 14.419483,
+				useInDirection: true,
+				title: "Lego museum"
+			},
+			{
+				id: 204,
+				index: "D",
+				lat: 50.085257,
+				lng: 14.425676,
+				useInDirection: true,
+				title: "Hamleys"
+			},
+			{
+				id: 201,
+				index: "A",
+				lat: 50.071295,
+				lng: 14.402594,
+				useInDirection: true,
+				title: "Королевство железных дорог"
+			},
+			{
+				id: 203,
+				index: "C",
+				lat: 50.049257,
+				lng: 14.297975,
+				useInDirection: true,
+				title: "BECKiLand"
+			}
+	  ]
+	},
+	{
+		routeID: 4,
+		title: "Food",
+		places:[
+			{
+				id: 1,
+				index: "A",
+				lat: 50.080173,
+				lng: 14.428616,
+				useInDirection: true,
+				title: "Vytopna"
+			},
+			{
+				id: 3,
+				index: "C",
+				lat: 50.087317,
+				lng: 14.419246,
+				useInDirection: true,
+				title: "U kata"
+			},
+			{
+				id: 4,
+				index: "D",
+				lat: 50.085935,
+				lng: 14.418192,
+				useInDirection: true,
+				title: "Vinárna Puškin"
+			},
 			{
 				id: 2,
 				index: "B",
-				lat: 49.848166995907725,
-				lng: 24.03911590576172,
+				lat: 50.088443,
+				lng: 14.409992,
 				useInDirection: true,
-				title: "Високий замок"
-			}
+				title: "Malostranská pivnice"
+			},
 	  ]
 	}
 ];

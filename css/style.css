@@ -9,7 +9,7 @@
 
 @media (min-width: 720px) {
 	#map 
-{	  height: 1400px;
+{	  height: 720px;
 	  position: relative;
 	  width: 100%;
 	}
@@ -17,7 +17,7 @@
 
 @media (min-width: 1200px) {
 	#map {
-	  height: 580px;
+	  height: 800px;
 	  position: relative;
 	  width: 100%;
 	}	
