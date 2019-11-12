@@ -12,7 +12,7 @@ var routes = [
 				title: "Вальдштейнський палац"
 			},
 			{
-				id: 1,
+				id: 2,
 				index: "B",
 				lat: 50.0900514,
 				lng: 14.4034629,
@@ -20,8 +20,8 @@ var routes = [
 				title: "Вальдштейнський сад"
 			},
 			{
-				id: 1,
-				index: "B",
+				id: 3,
+				index: "C",
 				lat: 50.0895666,
 				lng: 14.4006435,
 				useInDirection: true,
