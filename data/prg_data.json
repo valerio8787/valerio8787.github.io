@@ -1,0 +1,66 @@
+var routes = [
+	{
+		routeID: 0,
+		title: "Right Side",
+		places: [
+			{
+				id: 1,
+				index: "A",
+				lat: 50.0900514,
+				lng: 14.4034629,
+				useInDirection: true,
+				title: "Вальдштейнський палац"
+			},
+			{
+				id: 1,
+				index: "B",
+				lat: 50.0900514,
+				lng: 14.4034629,
+				useInDirection: true,
+				title: "Вальдштейнський сад"
+			},
+			{
+				id: 1,
+				index: "B",
+				lat: 50.0895666,
+				lng: 14.4006435,
+				useInDirection: true,
+				title: "Собор св. Вита"
+			}
+			
+		]
+	},
+	{
+		routeID: 1,
+		title: "Left Side",
+		places: [
+			{
+				id: 13,
+				index: "M",
+				lat: 49.84303002015965,
+				lng: 24.027941823005676,
+				useInDirection: true,
+
+				title: "Національний музей"
+			}
+		]
+	},
+	{
+		routeID: 2,
+		title: "08/01(Sunday)",
+		places:[
+			{
+				id: 2,
+				index: "B",
+				lat: 49.848166995907725,
+				lng: 24.03911590576172,
+				useInDirection: true,
+				title: "Високий замок"
+			}
+	  ]
+	}
+];
+
+var places = [];
+
+var other = [];
