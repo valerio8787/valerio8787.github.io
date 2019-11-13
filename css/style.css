@@ -7,7 +7,7 @@
 	width: 100%;
 }
 
-@media (min-width: 720px) {
+@media (min-width: 1024px) {
 	#map 
 {	  height: 720px;
 	  position: relative;
