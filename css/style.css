@@ -7,9 +7,10 @@
 	width: 100%;
 }
 
-@media (min-width: 1081px) {
+@media (min-width: 1079px) {
 	#map 
-{	  height: 2000px;
+	{
+	  height: 2000px;
 	  position: relative;
 	  width: 100%;
 	}
